@@ -37,6 +37,8 @@ export enum QuoteToken {
   'SQUIRE' = 'SQUIRE',
   'RBT' = 'RBT',
   'SHILLING' = 'SHILILNG',
+  'SOLID' = 'SOLID',
+  'XSOLID' = 'XSOLID',
 }
 
 export enum PoolCategory {

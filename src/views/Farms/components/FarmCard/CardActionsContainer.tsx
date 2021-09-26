@@ -74,6 +74,14 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account, 
     <Action>
       <Flex>
         <Text bold textTransform="uppercase" color="secondary" fontSize="12px" pr="3px">
+          {lpName}
+        </Text>
+        <Text bold textTransform="uppercase" color="textSubtle" fontSize="12px">
+          {TranslateString(1074, 'Staked')}
+        </Text>
+      </Flex>
+      <Flex>
+        <Text bold textTransform="uppercase" color="secondary" fontSize="12px" pr="3px">
           {/* Is there a way to get a dynamic value here from useFarmFromSymbol? */}
           xSOLID
         </Text>
@@ -82,14 +90,6 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account, 
         </Text>
       </Flex>
       <HarvestAction earnings={earnings} pid={pid} />
-      <Flex>
-        <Text bold textTransform="uppercase" color="secondary" fontSize="12px" pr="3px">
-          {lpName}
-        </Text>
-        <Text bold textTransform="uppercase" color="textSubtle" fontSize="12px">
-          {TranslateString(1074, 'Staked')}
-        </Text>
-      </Flex>
       {!account ? <UnlockButton mt="8px"  /> : renderApprovalOrStakeButton()}
     </Action>
   )

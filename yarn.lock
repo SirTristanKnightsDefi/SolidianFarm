@@ -1903,7 +1903,7 @@
 
 "@pancakeswap-libs/uikit@https://github.com/SirTristanKnightsDefi/SolidianFarmUiKit":
   version "0.12.0"
-  resolved "https://github.com/SirTristanKnightsDefi/SolidianFarmUiKit#8259c0ce9074ef0fbbcdb39308ac8087feef1835"
+  resolved "https://github.com/SirTristanKnightsDefi/SolidianFarmUiKit#6ab0bc4c88fdae0d6520aa04b37ef25549484781"
   dependencies:
     "@rollup/plugin-image" "^2.0.6"
     "@types/lodash" "^4.14.162"

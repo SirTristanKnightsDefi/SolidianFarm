@@ -102,10 +102,10 @@ const Farms: React.FC = () => {
     <Page>
       <Hero>
         <img
-          src="https://secureservercdn.net/72.167.241.180/x1q.de2.myftpupload.com/wp-content/uploads/2021/09/IMAGE_2021-09-16_23_10_30__1_-removebg-preview.png"
+          src=".\Solidian.png"
           alt="Solidian icon"
           style={{
-            height: '190px',
+            height: '128px',
             marginRight: '48px',
           }}
         />
