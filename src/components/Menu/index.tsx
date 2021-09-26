@@ -3,7 +3,7 @@ import { Menu as UikitMenu } from '@pancakeswap-libs/uikit'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { allLanguages } from 'config/localisation/languageCodes'
 import { LanguageContext } from 'contexts/Localisation/languageContext'
-import { usePriceCakeBusd, usePriceTableBusd, usePriceLegendBusd, usePriceSquireBusd, usePriceShillingBusd } from 'state/hooks'
+import { usePriceCakeBusd, usePriceTableBusd } from 'state/hooks'
 import useTheme from 'hooks/useTheme'
 import config from './config'
 
@@ -13,9 +13,6 @@ const Menu = (props) => {
   const { isDark, toggleTheme } = useTheme()
   const cakePriceUsd = usePriceCakeBusd()
   const tablePriceUsd = usePriceTableBusd()
-  const legendPriceUsd = usePriceLegendBusd()
-  const squirePriceUsd = usePriceSquireBusd()
-  const shillingPriceUsd = usePriceShillingBusd()
 
   return (
     <UikitMenu
@@ -28,11 +25,8 @@ const Menu = (props) => {
       currentLang={selectedLanguage && selectedLanguage.code}
       langs={allLanguages}
       setLang={setSelectedLanguage}
-      cakePriceUsd={cakePriceUsd.toNumber()}
-      tablePriceUsd={tablePriceUsd.toNumber()}
-      legendPriceUsd={legendPriceUsd.toNumber()}
-      squirePriceUsd={squirePriceUsd.toNumber()}
-      shillingPriceUsd={shillingPriceUsd.toNumber()}
+      solidPriceUsd={cakePriceUsd.toNumber()}
+      xsolidPriceUsd={tablePriceUsd.toNumber()}
       links={config}
       {...props}
     />

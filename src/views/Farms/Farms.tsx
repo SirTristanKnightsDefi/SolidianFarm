@@ -40,6 +40,7 @@ const Farms: React.FC = () => {
   const stackedOnlyFarms = activeFarms.filter(
     (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
   )
+
   // /!\ This function will be removed soon
   // This function compute the APY for each farm and will be replaced when we have a reliable API
   // to retrieve assets prices against USD
@@ -101,8 +102,8 @@ const Farms: React.FC = () => {
     <Page>
       <Hero>
         <img
-          src="/images/excalibur.png"
-          alt="Excalibur icon"
+          src="https://secureservercdn.net/72.167.241.180/x1q.de2.myftpupload.com/wp-content/uploads/2021/09/IMAGE_2021-09-16_23_10_30__1_-removebg-preview.png"
+          alt="Solidian icon"
           style={{
             height: '190px',
             marginRight: '48px',
@@ -113,11 +114,11 @@ const Farms: React.FC = () => {
             Farms
           </Heading>
           <Text>
-            Stake LP tokens to earn KNIGHT.
+            Stake LP tokens to earn xSOLID.
           </Text>
         </div>
       </Hero>
-      <FarmTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly}/>
+      {/* <FarmTabButtons stackedOnly={stackedOnly} setStackedOnly={setStackedOnly}/> */}
       <div>
         <FlexLayout>
           <Route exact path={`${path}`}>

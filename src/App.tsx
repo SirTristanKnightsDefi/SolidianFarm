@@ -14,10 +14,8 @@ import Pools from './views/Pools'
 // Only pool is included in the main bundle because of it's the most visited page'
 const Home = lazy(() => import('./views/Home'))
 const Farms = lazy(() => import('./views/Farms'))
-const Battlefield = lazy(() => import('./views/Battlefield'))
 const NotFound = lazy(() => import('./views/NotFound'))
 const NFT = lazy(() => import('./views/Nft'))
-const Lottery = lazy(() => import('./views/Lottery'))
 const Kingmaker = lazy(() => import('./views/Kingmaker'))
 
 // This config is required for number formating
@@ -51,26 +49,15 @@ const App: React.FC = () => {
       <Menu>
         <Suspense fallback={<PageLoader />}>
           <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/lottery" exact>
-              <Lottery />
-            </Route>
-            <Route path="/battlefield">
-              <Battlefield />
-            </Route>
+            
             <Route path="/farms">
               <Farms />
             </Route>
-            <Route path="/kingmaker">
-              <Kingmaker />
-            </Route>
-            <Route path="/nft">
-              <NFT />
-            </Route>
             <Route path="/pools">
               <Pools />
+            </Route>
+            <Route path="/" exact>
+              <Farms />
             </Route>
             {/* Redirect */}
             {/* 404 */}
